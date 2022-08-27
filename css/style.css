@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Inter:wght@200;300;400&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+
+html,
+* {
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+header {
+    background-image: url('../img/bg/background.png');
+    background-size: cover;
+}
+
+header .header {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+}
+
+nav ul {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 0;
+    position: fixed;
+    right: -10px;
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+nav ul .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    height: 50px;
+}
+
+nav ul .brand li {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-family: 'Cookie', cursive;
+}
+
+nav ul li a {
+    color: white;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: #A22DB5;
+}
+
+.jumbotron {
+    margin: 0 300px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    line-height: 0;
+}
+
+.jumbotron p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+}
+
+.jumbotron h1 {
+    font-family: 'Cookie', cursive;
+    font-weight: 100;
+    font-size: 56px;
+}
+
+.jumbotron .info p {
+    line-height: normal;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.jumbotron .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 50px;
+}
+
+.jumbotron .button a {
+    color: white;
+}
+
+.jumbotron .button .learnmore {
+    background-color: #A22DB5;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.jumbotron .button .learnmore:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* Popular Recipes */
+section.popular-recipes {
+    text-align: center;
+    height: 100vh;
+    line-height: 10px;
+}
+
+section .title p {
+    margin-top: 60px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+}
+
+section .title h1 {
+    font-family: 'Cookie', cursive;
+    font-weight: 100;
+    font-size: 56px;
+}
+
+.card {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* .card .right-shape {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    width: 250px;
+    bottom: 0;
+} */
+
+.card .card1,
+.card .card2,
+.card .card3 {
+    background-color: white;
+    width: 300px;
+    height: 550px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 1px 1px 6px orangered;
+}
+
+.card img {
+    width: 300px;
+}
+
+.card a {
+    color: black;
+}
+
+.card h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 10px;
+    text-align: left;
+    line-height: 18px;
+    padding: 20px 20px;
+}
+
+
+/* Overlay */
+.card .overlay .close {
+    position: absolute;
+    width: max-content;
+    text-align: center;
+    margin: -20px auto;
+    color: white;
+    border: 3px solid white;
+    padding: 10px 10px;
+    border-radius: 200%;
+    font-size: 20px;
+    opacity: 0;
+    transition: .5s;
+}
+
+.card .overlay:target .close {
+    right: 0;
+    left: 0;
+    top: 70px;
+    opacity: 1;
+}
+
+
+.card .overlay .close:hover {
+    background-color: white;
+    color: black;
+}
+
+.card .overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 999999;
+    text-align: center;
+    transition: .2s;
+    opacity: 0;
+
+}
+
+.card .overlay:target {
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.overlay .overlay-content {
+    overflow: hidden;
+    display: flex;
+    border-radius: 10px;
+    background-color: white;
+    width: 880px;
+    height: 450px;
+}
+
+.overlay .overlay-content .content {
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+.overlay .overlay-content img {
+    width: 450px;
+    height: 450px;
+}
+
+.overlay .overlay-content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* All Recipes */
+section.all-recipes {
+    text-align: center;
+    line-height: 10px;
+}
+
+section.all-recipes .content {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+section.all-recipes .content .recipes-food {
+    position: relative;
+    width: 199px;
+    height: 199px;
+    left: 0;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+section.all-recipes .content .recipes-food img {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+section.all-recipes .content .recipes-food span {
+    width: 199px;
+    position: absolute;
+    line-height: 199px;
+    left: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: .5s;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 21px;
+    text-align: center;
+}
+
+section.all-recipes .content .recipes-food span:hover {
+    opacity: 1;
+}
